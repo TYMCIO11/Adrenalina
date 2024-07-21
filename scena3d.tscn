@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl7jin2fv4wtg"]
+
+[ext_resource type="Texture2D" uid="uid://df7sgivphhnou" path="res://icon.svg" id="1_7mac6"]
+[ext_resource type="PackedScene" uid="uid://baahdwjp6yjit" path="res://amogus.tscn" id="2_s2nmk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8d8xp"]
+size = Vector3(20, 0.2, 20)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, -8.74228e-07, -20, 0, 20, -8.74228e-07, 0, 0, 0)
+texture = ExtResource("1_7mac6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_8d8xp")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_s2nmk")]
