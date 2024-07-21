@@ -1,3 +1,3 @@
 extends Node
 func _ready():
-	print("Hello")
+	print("Hello Wordo")
